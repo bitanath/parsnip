@@ -1,0 +1,83 @@
+{
+	"manifest_version": 3,
+	"name": "Parsnip",
+	"version": "1.7.4",
+	"description": "Easily chat with your Google Docs, PDFs or websites",
+	"icons": {
+		"16": "icons/icon-16.png",
+		"32": "icons/icon-32.png",
+		"64": "icons/icon-64.png",
+		"128": "icons/icon-128.png",
+		"512": "icons/icon-512.png",
+		"1024": "icons/icon-1024.png"
+	},
+	"action":{
+		"default_icon": {
+			"16": "icons/icon-16.png",
+			"32": "icons/icon-32.png",
+			"64": "icons/icon-64.png",
+			"128": "icons/icon-128.png",
+			"512": "icons/icon-512.png",
+			"1024": "icons/icon-1024.png"
+		}
+	},
+	"commands": {
+		"multi-tab-search": {
+			"suggested_key": {
+				"default": "Alt+Shift+F"
+			},
+			"description": "Search across all tabs"
+		},
+		"single-tab-search": {
+			"suggested_key": {
+				"default": "Alt+F"
+			},
+			"description": "Search across single tab"
+		}
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["./libs/readability.max.js", "content/search.js"],
+			"css": ["content/search.css"],
+			"run_at": "document_end"
+		}
+	],
+	"oauth2": {
+		"client_id": "896570358624-gaopt79akj3j0uf43v3j17vq8dtn75oh.apps.googleusercontent.com",
+		"scopes": [
+			"https://www.googleapis.com/auth/documents",
+			"https://www.googleapis.com/auth/presentations",
+			"https://www.googleapis.com/auth/drive"
+		]
+	},
+	"host_permissions": ["*://*/*"],
+	"web_accessible_resources": [
+		{
+			"resources": ["font/*"],
+			"matches": ["<all_urls>"]
+		}
+	],
+	"side_panel": {
+		"default_path": "sidepanel.html"
+	},
+	"trial_tokens": [
+		"AoISqTnw6JByaHy3Hk/y1ak7P0S0A6u/or/+1PoXW/oyounYlHA2YT6M7EkQkb9VxilscORZ1nvVqVcCPHU8vgsAAAB4eyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8vZ2tuZWNrY2RhZWxncGdkamhjb2NhZW9wa29pZ2dhbmMiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElGb3JFeHRlbnNpb24iLCJleHBpcnkiOjE3NjA0ODYzOTl9"
+	],
+	"background": {
+		"service_worker": "worker.js",
+		"type": "module"
+	},
+	"permissions": [
+		"tabs",
+		"storage",
+		"identity",
+		"scripting",
+		"activeTab",
+		"sidePanel",
+		"aiLanguageModelOriginTrial"
+	],
+	"content_security_policy": {
+		"extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com"
+	}
+}
