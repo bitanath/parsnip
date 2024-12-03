@@ -5,6 +5,7 @@ A complex chrome extension that allows semantic search across tabs, including ac
 
 ### Project Structure
 
+```
 ├──  components -> UI Components using Shadow DOM for custom elements
 │  ├──  export.js
 │  ├──  icons.js
@@ -62,6 +63,7 @@ A complex chrome extension that allows semantic search across tabs, including ac
 ├──  vectordb.js
 ├──  worker.js
 └──  workutils.js
+```
 
 ### Installation 
 Install as you would any Chrome Extension in Developer Mode. Simply Load Unpacked from folder after enabling Developer Mode in `chrome://extensions`
