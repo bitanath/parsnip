@@ -52,7 +52,6 @@ A complex chrome extension that allows semantic search across tabs, including ac
 │  ├──  pdfjs.min.js
 │  ├──  pdfjs.worker.js
 │  ├──  readability.max.js
-│  └──  readability.min.js
 ├──  LICENSE
 ├──  manifest.json -> Change Extension Trial Key here
 ├──  README.md
