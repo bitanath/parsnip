@@ -3,6 +3,12 @@ A complex chrome extension that allows semantic search across tabs, including ac
 
 ✨ Developed for the Google Chrome Built-in AI Challenge c.2024 
 
+### Quick Note before Installation
+The working of this extension depends on the AI Gemini Nano Model being downloaded through trial_tokens for this extension with key `trial_tokens` in `manifest.json`. 
+- In case the extension ID changes, this trial token will expire, and a new one needs to be generated from [here](https://developer.chrome.com/origintrials/#/trials/active)
+- In case the version of Chrome does not support local Gemini Nano, the extension will NOT work
+- This Extension was only tested on Version 133.0.6847.2 (Official Build) dev (arm64) and MacOS Sequioa
+
 ### Project Structure
 
 ```
@@ -66,8 +72,6 @@ A complex chrome extension that allows semantic search across tabs, including ac
 
 ### Installation 
 Install as you would any Chrome Extension in Developer Mode. Simply Load Unpacked from folder after enabling Developer Mode in `chrome://extensions`
-
-The working of this extension however, depends on the AI Gemini Nano Model being downloaded through trial_tokens for this extension with key `trial_tokens` in `manifest.json`. In case the extension ID changes, this trial token will expire, and a new one needs to be generated from [here](https://developer.chrome.com/origintrials/#/trials/active)
 
 ### Usage
 Once installed, simply press `Shift+Alt+F` or `Shift+Option+F` in order to open up the search UI on any page. Tabs are indexed and vectorized in the background while you browse. 
