@@ -9,6 +9,8 @@ The working of this extension depends on the AI Gemini Nano Model being download
 - In case the version of Chrome does not support local Gemini Nano, the extension will NOT work
 - This Extension was only tested on Version 133.0.6847.2 (Official Build) dev (arm64) and MacOS Sequioa
 
+Once Installed use `Shift+Alt+F` to search across tabs.
+
 ### Project Structure
 
 ```
