@@ -1,8 +1,6 @@
 # ✂ Parsnip - Chrome Extension
 A complex chrome extension that allows semantic search across tabs, including across **PDFs**, **Google Docs** and **Google Slides**
 
-✨ Developed for the Google Chrome Built-in AI Challenge c.2024 
-
 ### Quick Note before Installation
 The working of this extension depends on the AI Gemini Nano Model being downloaded through trial_tokens for this extension with key `trial_tokens` in `manifest.json`. 
 - In case the extension ID changes, this trial token will expire, and a new one needs to be generated from [here](https://developer.chrome.com/origintrials/#/trials/active)
